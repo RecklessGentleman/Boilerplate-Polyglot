@@ -1,0 +1,60 @@
+// This order follows the recommended order found at https://css-tricks.com/sass-style-guide/#article-header-id-10
+// 1. Anything to import: Normalize, Reset, Bootstrap, Foundation, UI Kit, etc
+	@import '01-import/normalize';
+
+// Uncomment depending on Framework
+	// Bootstrap
+	// @import '01-import/bootstrap';
+	// @import '01-import/bootstrap-ui';
+
+	// jQuery UI
+	// @import '01-import/jquery-ui';
+
+	// Foundation
+	// @import '01-import/foundation';
+	
+	// UI Kit
+	// @import '01-import/ui-kit';
+	// @import '01-import/ui-kit-custom';
+
+
+// 2. Core files: Variables: Breakpoints, fonts, and colors, mostly
+	@import '02-core/variables';
+	@import '02-core/colors';
+	@import '02-core/fonts';
+
+// 3. Animation, just in case
+	@import '03-animation/animation';
+
+// 4. Global: Anything base and repeatable to the design
+	@import '04-global/global';
+
+// 5. Layout: Files divided by section
+	@import '05-layout/header';
+	@import '05-layout/navbar';
+	@import '05-layout/sidebar';
+	@import '05-layout/mainContent';
+	@import '05-layout/footer';
+
+	// Others will go here as needed
+	@import '05-layout/widgets';
+
+
+// 6. Plugins: Anything plugin-related. Typically jQuery add on stuff
+	@import '06-plugins/plugins';
+
+// 7. Shame: Quick hacks that the client requires. 
+	// Comment this line out to restore the original creation
+	
+	// TODO: It would eventually be cool to make this a second file in the gulp.js process
+	@import '07-shame/compromise';
+
+
+
+
+
+
+
+
+
+
