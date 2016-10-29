@@ -1,3 +1,9 @@
+# Dist folder
+dist
+
+# Uncompressed CSS
+app/css/screen.css
+
 # Logs
 logs
 *.log
