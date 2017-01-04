@@ -353,8 +353,340 @@ td,
 th {
   padding: 0; }
 
+/* BEGIN TRIAL COLOR MAPS */
+/* Text Colors */
+.color-red {
+  color: #C1524F; }
+
+.color-orange {
+  color: #E67E47; }
+
+.color-yellow {
+  color: #DCBF46; }
+
+.color-green {
+  color: #84A98C; }
+
+.color-blue {
+  color: #5A9FB5; }
+
+.color-purple {
+  color: #A38AB7; }
+
+.color-primaryColor {
+  color: #5A9FB5; }
+
+.color-white {
+  color: #FFFFFF; }
+
+.color-gray-light {
+  color: #D9D9D9; }
+
+.color-gray-mid {
+  color: #808080; }
+
+.color-black {
+  color: #2A2D34; }
+
+.color-gray-dark {
+  color: #3D3D3D; }
+
+/* Background Colors with proper Text Colors */
+.bg_white {
+  background-color: #FFFFFF;
+  color: #2A2D34; }
+
+.bg_gray-light {
+  background-color: #D9D9D9;
+  color: #2A2D34; }
+
+.bg_gray-mid {
+  background-color: #808080;
+  color: #2A2D34; }
+
+.bg_black {
+  background-color: #2A2D34;
+  color: #D9D9D9; }
+  .bg_black a {
+    color: #D9D9D9; }
+    .bg_black a:visited {
+      color: silver; }
+    .bg_black a:hover {
+      color: #999999; }
+    .bg_black a:active {
+      color: white; }
+
+.bg_gray-dark {
+  background-color: #3D3D3D;
+  color: #D9D9D9; }
+  .bg_gray-dark a {
+    color: #D9D9D9; }
+    .bg_gray-dark a:visited {
+      color: silver; }
+    .bg_gray-dark a:hover {
+      color: #999999; }
+    .bg_gray-dark a:active {
+      color: white; }
+
+.bg_color-red {
+  background-color: #C1524F;
+  color: #FFFFFF; }
+  .bg_color-red a {
+    color: #FFFFFF; }
+    .bg_color-red a:visited {
+      color: #e6e6e6; }
+    .bg_color-red a:hover {
+      color: #bfbfbf; }
+    .bg_color-red a:active {
+      color: white; }
+
+.bg_color-orange {
+  background-color: #E67E47;
+  color: #FFFFFF; }
+  .bg_color-orange a {
+    color: #FFFFFF; }
+    .bg_color-orange a:visited {
+      color: #e6e6e6; }
+    .bg_color-orange a:hover {
+      color: #bfbfbf; }
+    .bg_color-orange a:active {
+      color: white; }
+
+.bg_color-yellow {
+  background-color: #DCBF46;
+  color: #FFFFFF; }
+  .bg_color-yellow a {
+    color: #FFFFFF; }
+    .bg_color-yellow a:visited {
+      color: #e6e6e6; }
+    .bg_color-yellow a:hover {
+      color: #bfbfbf; }
+    .bg_color-yellow a:active {
+      color: white; }
+
+.bg_color-green {
+  background-color: #84A98C;
+  color: #FFFFFF; }
+  .bg_color-green a {
+    color: #FFFFFF; }
+    .bg_color-green a:visited {
+      color: #e6e6e6; }
+    .bg_color-green a:hover {
+      color: #bfbfbf; }
+    .bg_color-green a:active {
+      color: white; }
+
+.bg_color-blue {
+  background-color: #5A9FB5;
+  color: #FFFFFF; }
+  .bg_color-blue a {
+    color: #FFFFFF; }
+    .bg_color-blue a:visited {
+      color: #e6e6e6; }
+    .bg_color-blue a:hover {
+      color: #bfbfbf; }
+    .bg_color-blue a:active {
+      color: white; }
+
+.bg_color-purple {
+  background-color: #A38AB7;
+  color: #FFFFFF; }
+  .bg_color-purple a {
+    color: #FFFFFF; }
+    .bg_color-purple a:visited {
+      color: #e6e6e6; }
+    .bg_color-purple a:hover {
+      color: #bfbfbf; }
+    .bg_color-purple a:active {
+      color: white; }
+
+.bg_color-primaryColor {
+  background-color: #5A9FB5;
+  color: #FFFFFF; }
+  .bg_color-primaryColor a {
+    color: #FFFFFF; }
+    .bg_color-primaryColor a:visited {
+      color: #e6e6e6; }
+    .bg_color-primaryColor a:hover {
+      color: #bfbfbf; }
+    .bg_color-primaryColor a:active {
+      color: white; }
+
 @font-face {
   font-family: 'code_boldregular';
   src: url("../../fonts/code_bold-webfont.woff2") format("woff2"), url("../../fonts/code_bold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
+
+* {
+  box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  min-height: 100%; }
+
+img {
+  max-width: 100%; }
+
+div {
+  display: block; }
+
+.spacer10 {
+  height: 1px;
+  margin-bottom: 9px;
+  clear: both;
+  width: 100%; }
+
+.spacer20 {
+  height: 1px;
+  margin-bottom: 19px;
+  clear: both;
+  width: 100%; }
+
+.spacer30 {
+  height: 1px;
+  margin-bottom: 29px;
+  clear: both;
+  width: 100%; }
+
+.spacer40 {
+  height: 1px;
+  margin-bottom: 39px;
+  clear: both;
+  width: 100%; }
+
+.spacer50 {
+  height: 1px;
+  margin-bottom: 49px;
+  clear: both;
+  width: 100%; }
+
+.spacer60 {
+  height: 1px;
+  margin-bottom: 59px;
+  clear: both;
+  width: 100%; }
+
+.spacer70 {
+  height: 1px;
+  margin-bottom: 69px;
+  clear: both;
+  width: 100%; }
+
+.spacer80 {
+  height: 1px;
+  margin-bottom: 79px;
+  clear: both;
+  width: 100%; }
+
+.spacer90 {
+  height: 1px;
+  margin-bottom: 89px;
+  clear: both;
+  width: 100%; }
+
+.spacer100 {
+  height: 1px;
+  margin-bottom: 99px;
+  clear: both;
+  width: 100%; }
+
+body {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #2A2D34; }
+
+a {
+  text-decoration: underline;
+  font-weight: bold;
+  color: #5A9FB5; }
+  a:visited {
+    color: #448498; }
+  a:hover {
+    color: #2c5663; }
+  a:active {
+    color: #a0c8d5; }
+
+hr.hr-small {
+  max-width: 33%; }
+
+hr.hr-medium {
+  max-width: 65%; }
+
+hr.hr-large {
+  max-width: 100%; }
+
+.container-full {
+  width: 100%; }
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 2em; }
+
+.content-block {
+  margin-bottom: 2em;
+  padding: 1em;
+  width: 100%;
+  min-height: 3em; }
+
+.clearfix {
+  clear: both;
+  display: table;
+  content: " "; }
+  .clearfix:before {
+    display: table;
+    content: " "; }
+  .clearfix:after {
+    clear: both;
+    display: table;
+    content: " "; }
+
+.text-left {
+  text-align: left; }
+
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
+header, main, aside, footer {
+  display: block; }
+
+header {
+  min-height: 10em;
+  padding: 1em 0;
+  font-family: 'code_boldregular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  letter-spacing: 3px; }
+  header span.title {
+    display: block;
+    font-size: 4em;
+    line-height: 1;
+    margin-bottom: 0.25em;
+    padding: 0; }
+  header span.subtitle {
+    display: block;
+    font-size: 1em;
+    margin-top: 1.5em; }
+
+main {
+  min-height: 5em; }
+  @media screen and (min-width: 767px) {
+    main.withSidebar {
+      float: left;
+      max-width: 68%;
+      width: 100%;
+      margin-right: 2%; } }
+
+aside {
+  display: block; }
+  @media screen and (min-width: 767px) {
+    aside {
+      float: right;
+      max-width: 30%;
+      width: 100%; } }
+
+footer {
+  margin-top: 2em;
+  min-height: 5em; }

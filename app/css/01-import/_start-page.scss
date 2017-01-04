@@ -1,0 +1,262 @@
+// Hi! Thank you for downloading this. 
+// 
+// All of the styles are set up in this one page so they can be easily removed.
+// To revert back to the blank, normalized state:
+// 1. Remove the call to this file in /app/css/screen.scss on line 4.
+// 2. Delete this file, or not! Either way, you're good to go!
+
+
+// Variables 
+	// Breakpoints
+	$breakpoint-huge   : 1200px;
+	$breakpoint-large  : 1170px;
+	$breakpoint-medium : 1024px;
+	$breakpoint-small  :  992px;
+	$breakpoint-mobile :  767px;
+	$breakpoint-tiny   :  480px;
+
+// Mixin to set a single breakpoint
+	@mixin bpSingle($minmax, $size) {
+		$direction: "(#{$minmax}-width: #{$size})";
+		@media screen and #{$direction} { @content; }
+	}
+	@mixin simpleAnchorStyle($color: $gray-mid) {
+		// Nest this inside an anchor tag
+		color: $color;
+		&:visited {
+  			color: darken($color, 10);
+		}
+		&:hover {
+  			color: darken($color, 25); 
+		}
+		&:active {
+  			color: lighten($color, 20);
+		}
+	}
+	@mixin clearfix {
+		clear: both;
+		display: table;
+		content: " ";
+		&:before {
+			display: table;
+			content: " ";
+		}
+		&:after {
+			clear: both;
+			display: table;
+			content: " ";
+		}
+	}
+
+// Colors
+	$black 			: #2A2D34;
+	$white			: #FFFFFF;
+	$gray-light		: #D9D9D9;
+	$gray-mid		: #808080;
+	$gray-dark		: #3D3D3D; //#353535;
+	// Extra Colors
+	$color-red 	 	: #C1524F; // Other Options:#C3423F;
+	$color-orange	: #E67E47; // Other Options:#F26419;
+	$color-yellow	: #DCBF46; // Other Options: #EAC323; #F7DD72; #DBAC1E; #FAC05E;
+	$color-green 	: #84A98C; // Darker: #5C946E;
+	$color-blue  	: #5A9FB5; // Other Options: Original: #007EA7;
+	$color-purple	: #A38AB7; // Other Options: #9368B7;
+	
+	// Sets Color Scheme
+	$primaryColor 	: $gray-light !default;
+	$primaryColor 	: $color-blue;
+	
+	$colors-light: (
+		'white'			: $white,
+		'gray-light'	: $gray-light,
+		'gray-mid'		: $gray-mid,
+	);
+	$colors-dark: (
+		'black'			: $black,
+		'gray-dark' 	: $gray-dark,
+	);
+	$colors-colors: (
+		'red'			: $color-red,
+	    'orange'		: $color-orange,
+	    'yellow'		: $color-yellow,
+	    'green'			: $color-green,
+	    'blue'			: $color-blue,
+	    'purple'	  	: $color-purple,
+	    'primaryColor'	: $primaryColor
+	);
+	/* BEGIN TRIAL COLOR MAPS */
+	// TEXT COLORS	
+		/* Text Colors */
+		// All?
+		@each $key, $value in map-merge($colors-colors,map-merge($colors-light, $colors-dark)) {
+			.color-#{$key} { color: #{$value}; }
+		}
+
+	// BACKGROUND COLORS
+		/* Background Colors with proper Text Colors */
+		// Light
+		@each $key, $value in $colors-light {
+			.bg_#{$key} { 
+				background-color: #{$value}; 
+				color: $black; 
+			}
+		}
+		// Dark
+		@each $key, $value in $colors-dark {
+			.bg_#{$key} { 
+				background-color: #{$value}; 
+				color : $gray-light;
+				a { @include simpleAnchorStyle($gray-light); }
+			}
+		}
+		// Acutal Colors
+		@each $key, $value in $colors-colors {
+			.bg_color-#{$key} { 
+				background-color: #{$value}; 
+				color : $white;
+				a { @include simpleAnchorStyle($white); }
+			}
+		}
+
+	// Typography
+	$headers: 'h1,h2,h3,h4,h5,h6';
+	$url : '../../fonts' !default;
+		@font-face {
+			font-family: 'code_boldregular';
+			src: url('#{$url}/code_bold-webfont.woff2') format('woff2'),
+			url('#{$url}/code_bold-webfont.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+// Basic Sample Set Up
+	* { box-sizing: border-box; }
+	html, body { height: 100%; min-height: 100%; }
+	img { max-width: 100%; }
+	div { display: block; }
+	// Spacer Loop
+	@for $i from 1 through 10 {
+		$digit: $i * 10;
+		.spacer#{$digit} { height: 1px; margin-bottom:  $digit - 1px; clear: both; width: 100%; } 
+	}
+
+	// Global Styles
+	body { 
+		font-size: 16px; 
+		line-height: 1.6; 
+		color: $black;
+	}
+	a { 
+		text-decoration: underline;
+		font-weight: bold;
+		@include simpleAnchorStyle($primaryColor); 
+	}
+
+	// Subjective Styles
+	hr.hr-small  { max-width:  33%; }
+	hr.hr-medium { max-width:  65%; }
+	hr.hr-large  { max-width: 100%; }
+
+
+// Structure Styles
+
+.container-full {
+	width: 100%;
+}
+
+.container {
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 2em;
+}
+
+.content-block {
+	margin-bottom: 2em;
+	padding: 1em;
+	width: 100%;
+	min-height: 3em;
+}
+
+.clearfix { @include clearfix; }
+
+.text-left 	 { text-align: left;   }
+.text-center { text-align: center; }
+.text-right  { text-align: right;  }
+
+header, main, aside, footer { display: block; }
+
+// Header
+header {
+	min-height: 10em;
+	padding: 1em 0;
+	font-family: 'code_boldregular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	letter-spacing: 3px;
+	span.title { 
+		display: block;
+		font-size: 4em;
+		line-height: 1;
+		margin-bottom: 0.25em; 
+		padding: 0;
+	}
+	span.subtitle  { 
+		display: block;
+		font-size: 1em; 
+		margin-top: 1.5em;
+	}
+}
+
+
+// Main Content
+main {
+	min-height: 5em;
+	@include bpSingle('min', $breakpoint-mobile) {
+		&.withSidebar {
+			float: left;
+			max-width: 68%;
+			width: 100%;
+			margin-right: 2%;
+		}
+	}
+
+}
+
+// Sidebar
+aside {
+	display: block;
+	@include bpSingle('min', $breakpoint-mobile) {
+		float: right;
+		max-width: 30%;
+		width: 100%;
+	}
+}
+
+// Footer
+footer {
+	margin-top: 2em;
+	min-height: 5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+

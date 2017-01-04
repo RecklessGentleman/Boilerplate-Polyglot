@@ -1,6 +1,7 @@
 // This order follows the recommended order found at https://css-tricks.com/sass-style-guide/#article-header-id-10
 // 1. Anything to import: Normalize, Reset, Bootstrap, Foundation, UI Kit, etc
 	@import '01-import/normalize';
+	@import '01-import/start-page';
 
 // Uncomment depending on Framework
 	// Bootstrap

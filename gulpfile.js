@@ -31,10 +31,6 @@ var source = {
 	fonts:'app/fonts/**/*'
 };
 
-// var htmlSources = "app/*.html";
-// var sassSources = 'app/css/**/*.scss';
-// var jsSources   = 'app/js/**/*.js';
-
 // ==================================
 // :: Tasks :: 
 // ==================================
@@ -141,26 +137,6 @@ gulp.task('default', ['browserSync', 'bs-reload', 'sass', 'publishHTML', 'sass',
 	gulp.watch(source.img, ['buildIMG']); // Images
 	gulp.watch(source.fonts, ['buildFONTS']); // Fonts
 });
-
-
-// gulp.task('default', ['browserSync', 'sass', 'publishHTML', 'sass', 'scripts', 'img', 'fonts', 'buildHTML', 'buildCSS', 'buildJS', 'buildIMG', 'buildFONTS'], function (){
-// 	// CSS
-// 	gulp.watch(source.scss, ['sass']); 
-// 	gulp.watch('dist/css/*.css', browserSync.reload); 
-// 	// HTML
-// 	gulp.watch('app/*.html', ['buildHTML']);
-// 	gulp.watch('app/*.html', browserSync.reload); 
-// 	// JS
-// 	gulp.watch(jsSources, ['buildJS']); 
-// 	gulp.watch('dist/js/*.js', browserSync.reload); 
-// 	// IMG
-// 	gulp.watch(jsSources, ['buildIMG']); 
-// 	gulp.watch('dist/img/**/*', browserSync.reload); 
-// 	// FONTS
-// 	gulp.watch(jsSources, ['buildFONTS']); 
-// 	gulp.watch('dist/fonts/**/*', browserSync.reload); 
-// });
-
 
 
 

@@ -1,13 +1,17 @@
 //_fonts.scss
 
 // To add a custom font, the proper path is '../../fonts/'. Or just use #{$url}/
+// For Example:
+// @font-face {
+// 	font-family: 'code_boldregular';
+// 	src: url('#{$url}/code_bold-webfont.woff2') format('woff2'),
+// 	url('#{$url}/code_bold-webfont.woff') format('woff');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+
+
 $url : '../../fonts';
 
 
-@font-face {
-	font-family: 'code_boldregular';
-	src: url('#{$url}/code_bold-webfont.woff2') format('woff2'),
-	url('#{$url}/code_bold-webfont.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-}
+
