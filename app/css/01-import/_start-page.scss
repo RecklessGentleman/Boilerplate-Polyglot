@@ -140,6 +140,51 @@
 		.spacer#{$digit} { height: 1px; margin-bottom:  $digit - 1px; clear: both; width: 100%; } 
 	}
 
+/* Bootstrap Gutter Width Fix */
+	// Boostrap Gutter Width Fix
+		// Gutter Static
+		@for $i from 0 through 10 {
+			$gutter : ($i * 10);
+			.row.gutter-#{$gutter} { 
+				margin-left : -($gutter / 2)+px;
+				margin-right: -($gutter / 2)+px;
+			}
+			.gutter-#{$gutter} > [class^="col-"], .gutter-#{$gutter} > [class^=" col-"] {
+				padding-right: ($gutter / 2)+px;
+				padding-left : ($gutter / 2)+px;
+			}
+		}
+
+		// Gutter Relative
+		$gutterRel : 10;
+		@while $gutterRel >= 0 {
+			.row.gutter-#{$gutterRel}-em {
+				margin-left : ($gutterRel / 2)+em;
+				margin-right: ($gutterRel / 2)+em;
+			}
+			.gutter-#{$gutterRel}-em > [class^="col-"], .gutter-#{$gutterRel}-em > [class^=" col-"] {
+				padding-right: #{$gutterRel}em;
+				padding-left : #{$gutterRel}em;
+			}
+			$gutterRel: $gutterRel - 1;
+		}
+
+	// 20px gutter 
+		// .gutter-20.row { margin-right: -10px; margin-left: -10px; } 
+		// .gutter-20 > [class^="col-"], 
+		// .gutter-20 > [class^=" col-"] { padding-right: 10px; padding-left: 10px; } 
+	// 10px gutter 
+		// .gutter-10.row { margin-right: -5px; margin-left: -5px; } 
+		// .gutter-10 > [class^="col-"], .gutter-10 > [class^=" col-"] { 
+		// 	padding-right: 5px; padding-left: 5px; 
+		// } 
+	// 0px gutter 
+		// .gutter-0.row { margin-right: 0; margin-left: 0; } 
+		// .gutter-0 > [class^="col-"], .gutter-0 > [class^=" col-"]{ 
+		// 	padding-right: 0; padding-left: 0;
+		// }
+/* Bootstrap Gutter Width Fix */
+
 	// Global Styles
 	body { 
 		font-size: 16px; 

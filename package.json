@@ -1,6 +1,6 @@
 {
   "name": "Modified-Quench-Boilerplate",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Modified Gulp file and project generator from Quench, edited for my specific setup",
   "main": "gulpfile.js",
   "scripts": {
